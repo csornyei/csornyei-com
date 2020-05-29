@@ -1,11 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Job } from './types';
+import CVDetails from './CVDetails';
+
+import dropdown from '../assets/dropdown.png';
 
 const ItemContainer = styled.div`
     width: 100%;
     background-color: #dae1e7;
     padding: 16px 8px;
     margin-bottom: 8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 
     cursor: pointer;
 
@@ -14,15 +23,40 @@ const ItemContainer = styled.div`
     }
 `;
 
+const Logo = styled.img`
+    height: 48px;
+    margin-right: 32px;
+`;
+
+const PositionTitle = styled.h3`
+    font-family: Montserrat Arial, Helvetica, sans-serif;
+    font-weight: bold;
+`;
+
+const DropdownArrow = styled.img`
+    margin-left: auto;
+    height: 12px;
+`;
+
 interface CVItemProps {
-    title: String
+    job: Job;
+    detailsOpened: boolean;
+    clicked: () => void;
 }
 
 const CVItem = (props: CVItemProps) => {
+
+    const details = props.detailsOpened ? <CVDetails job={props.job} /> : null
+
     return (
-        <ItemContainer>
-            {props.title}
-        </ItemContainer>
+        <>
+            <ItemContainer onClick={props.clicked}>
+                <Logo src={props.job.logo} alt={props.job.employer} />
+                <PositionTitle>{props.job.position}</PositionTitle>
+                <DropdownArrow src={dropdown} alt="Dropdown icon" />
+            </ItemContainer>
+            {details}
+        </>
     );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 
-import profile from './profile.jpeg';
+import profile from './assets/profile.jpeg';
 
 const HeaderContainer = styled.div`
     display: flex;
