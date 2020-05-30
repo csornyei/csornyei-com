@@ -11,6 +11,7 @@ const NavbarContainer = styled.div`
 
     padding: 8px 33%;
     border-bottom: 2px solid #333;
+    background-color: #BCCFDC;
 `;
 
 const NavbarLink = styled(Link)`
