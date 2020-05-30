@@ -17,13 +17,54 @@ const CVItemContainer = styled.div`
 `;
 
 const CVPage = () => {
-
-    const [opened, setOpened] = useState(-1);
+    // TODO: set back to -1
+    const [opened, setOpened] = useState(0);
 
     const jobs: Job[] = [
-        {employer: "Prezi", position: "Full Stack Engineer Intern", logo: prezi, startDate: "2019 September", endDate: "2020 May", duration: "9 months"},
-        {employer: "GE", position: "Software Developer Intern", logo: ge,  startDate: "2018 May", endDate: "2019 August", duration: "1 year 5 months"},
-        {employer: "Magyar Telekom", position: "E-Service Intern", logo: telekom, startDate: "2017 March", endDate: "2017 December", duration: "10 months"}
+        {
+            employer: "Prezi",
+            position: "Full Stack Engineer Intern",
+            logo: prezi,
+            startDate: "2019 September",
+            endDate: "2020 May",
+            duration: "9 months",
+            duties: [
+                "Developing applications with React",
+                "Maintaining and developing Django services",
+                "Creating and using Jenkins jobs",
+                "Creating automatic GUI tests with Selenium and Java"
+            ],
+            technologies: ["Typescript", "React", "Redux", "Django", "Jenkins", "Docker", "AWS", "Java"]
+        },
+        {
+            employer: "GE Power",
+            position: "Software Developer Intern",
+            logo: ge,
+            startDate: "2018 May",
+            endDate: "2019 August",
+            duration: "1 year 5 months",
+            duties: [
+                "Developing frontend applications with React and Angular",
+                "Developing and maintaining backend services in PHP and NodeJS",
+                "Managing MongoDB, DynamoDB and PostgreSQL databases",
+                "Developing Lambda functions on AWS"
+            ],
+            technologies: ["Typescript", "Angular", "React", "NodeJS", "PHP", "NoSQL and SQL Databases", "AWS"]
+        },
+        {
+            employer: "Magyar Telekom",
+            position: "E-Service Intern",
+            logo: telekom,
+            startDate: "2017 March",
+            endDate: "2017 December",
+            duration: "10 months",
+            duties: [
+                "Creating daily and weekly reports about the Online Customer Service",
+                "Calculating KPIs based on user reviews",
+                "Automating these tasks"
+            ],
+            technologies: ["Excel", "VBA"]
+        }
     ]
 
     const switchDetails = (index: number) => {

@@ -15,6 +15,13 @@
 @font-face {
     font-family: "Oswald";
     src: url("Oswald-Medium.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("Oswald-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }

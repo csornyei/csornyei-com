@@ -5,4 +5,6 @@ export interface Job {
     startDate: string;
     endDate: string;
     duration: string;
+    duties: string[];
+    technologies: string[];
 }

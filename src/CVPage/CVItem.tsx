@@ -5,11 +5,11 @@ import CVDetails from './CVDetails';
 
 import dropdown from '../assets/dropdown.png';
 
-const ItemContainer = styled.div`
+const ItemContainer = styled.div<{detailsOpened: boolean}>`
     width: 100%;
     background-color: #dae1e7;
     padding: 16px 8px;
-    margin-bottom: 8px;
+    margin-bottom: ${props => (props.detailsOpened ? 0 : 8)}px;
 
     display: flex;
     flex-direction: row;
@@ -50,7 +50,7 @@ const CVItem = (props: CVItemProps) => {
 
     return (
         <>
-            <ItemContainer onClick={props.clicked}>
+            <ItemContainer onClick={props.clicked} detailsOpened={props.detailsOpened}>
                 <Logo src={props.job.logo} alt={props.job.employer} />
                 <PositionTitle>{props.job.position}</PositionTitle>
                 <DropdownArrow src={dropdown} alt="Dropdown icon" />
