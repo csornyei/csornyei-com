@@ -1,9 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 
-import profile from './assets/profile.jpeg';
-import background from './assets/autumn-forest.jpg';
-
 const HeaderContainer = styled.div`
     display: flex;
     position: relative;
@@ -17,7 +14,7 @@ const HeaderContainer = styled.div`
 
 
     &::before {
-        background-image: url(${background});
+        background-image: url("https://s3.eu-central-1.amazonaws.com/www.csornyei.com/assets/autumn-forest.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -87,7 +84,7 @@ const HeaderPicture = styled.img`
 const Header = () => {
     return (
         <HeaderContainer>
-            <HeaderPicture src={profile} alt="Me"/>
+            <HeaderPicture src="https://s3.eu-central-1.amazonaws.com/www.csornyei.com/assets/profile.jpeg" alt="Me"/>
             <HeaderTextContainer>
                 <HeaderMainText>Hi, I'm <HeaderTextBold>Máté</HeaderTextBold></HeaderMainText>
                 <HeaderTextRight>a Web Developer</HeaderTextRight>

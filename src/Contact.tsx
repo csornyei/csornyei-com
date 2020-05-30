@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import linkedInIcon from './assets/linkedin.png';
-import githubIcon from './assets/github.png';
-import emailIcon from './assets/email.png';
-import copyIcon from './assets/copy.png';
-
 const ContactLinkContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -68,12 +63,12 @@ const Contact = () => {
     return (
             <ContactLinkContainer>
                 <ContactLinkRow>
-                    <LinkItem href="https://www.linkedin.com/in/mate-csornyei/"><LinkImage src={linkedInIcon} alt="LinkedIn" /></LinkItem>
-                    <LinkItem href="https://github.com/csornyei"><LinkImage src={githubIcon} alt="Github" /></LinkItem>
+                    <LinkItem href="https://www.linkedin.com/in/mate-csornyei/"><LinkImage src="https://s3.eu-central-1.amazonaws.com/www.csornyei.com/assets/linkedin.png" alt="LinkedIn" /></LinkItem>
+                    <LinkItem href="https://github.com/csornyei"><LinkImage src="https://s3.eu-central-1.amazonaws.com/www.csornyei.com/assets/github.png" alt="Github" /></LinkItem>
                 </ContactLinkRow>
                 <ContactLinkRow>
-                    <LinkItem href="mailto:mate@csornyei"><LinkImage src={emailIcon} alt="E-mail" /> mate@csornyei.com</LinkItem>
-                    <CopyImage src={copyIcon} alt="copy" onClick={copyOnClick} />
+                    <LinkItem href="mailto:mate@csornyei"><LinkImage src="https://s3.eu-central-1.amazonaws.com/www.csornyei.com/assets/email.png" alt="E-mail" /> mate@csornyei.com</LinkItem>
+                    <CopyImage src="https://s3.eu-central-1.amazonaws.com/www.csornyei.com/assets/copy.png" alt="copy" onClick={copyOnClick} />
                 </ContactLinkRow>
             </ContactLinkContainer>
     );

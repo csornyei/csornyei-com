@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import { Job } from './types';
 import CVDetails from './CVDetails';
 
-import dropdown from '../assets/dropdown.png';
-
 const ItemContainer = styled.div<{detailsOpened: boolean}>`
     width: 100%;
     background-color: #2A3132;
@@ -55,7 +53,7 @@ const CVItem = (props: CVItemProps) => {
             <ItemContainer onClick={props.clicked} detailsOpened={props.detailsOpened}>
                 <Logo src={props.job.logo} alt={props.job.employer} />
                 <PositionTitle>{props.job.position}</PositionTitle>
-                <DropdownArrow src={dropdown} alt="Dropdown icon" />
+                <DropdownArrow src="https://s3.eu-central-1.amazonaws.com/www.csornyei.com/assets/dropdown.png" alt="Dropdown icon" />
             </ItemContainer>
             {details}
         </>
