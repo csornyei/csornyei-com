@@ -6,6 +6,7 @@ import { Job } from './types';
 import prezi from '../assets/prezi.png';
 import ge from '../assets/GE.png';
 import telekom from '../assets/telekom.png';
+import corvinus from '../assets/corvinus.jpeg';
 
 const CVItemContainer = styled.div`
 
@@ -83,7 +84,7 @@ const CVPage = () => {
             type: "edu",
             position: "Business Informatics BSc",
             employer: "Corvinus University of Budapest",
-            logo: "",
+            logo: corvinus,
             startDate: "2016 September",
             endDate: "2021 January",
             current: "I'm writing my thesis about meassuring page load performance"

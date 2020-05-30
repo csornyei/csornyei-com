@@ -9,6 +9,7 @@ import Header from './Header'
 import Navbar from './Navbar';
 import Contact from './Contact';
 import CVPage from './CVPage';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </Router>
   );
 }
