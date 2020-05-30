@@ -7,7 +7,8 @@ import dropdown from '../assets/dropdown.png';
 
 const ItemContainer = styled.div<{detailsOpened: boolean}>`
     width: 100%;
-    background-color: #dae1e7;
+    background-color: #2A3132;
+
     padding: 16px 8px;
     margin-bottom: ${props => (props.detailsOpened ? 0 : 8)}px;
 
@@ -30,6 +31,7 @@ const Logo = styled.img`
 
 const PositionTitle = styled.h3`
     font-family: Montserrat Arial, Helvetica, sans-serif;
+    color: #BCCFDC;
     font-weight: bold;
 `;
 
