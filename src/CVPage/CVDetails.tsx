@@ -80,7 +80,7 @@ const CVDetails = (props: {job: Job}) => {
         );
     }
 
-    const date = <DetailText>{props.job.startDate} - {props.job.endDate} {!!props.job.duration ? "({props.job.duration})" : ""}</DetailText>
+    const date = <DetailText>{props.job.startDate} - {props.job.endDate} {!!props.job.duration ? `(${props.job.duration})` : ""}</DetailText>
 
     return (
         <DetailContainer>

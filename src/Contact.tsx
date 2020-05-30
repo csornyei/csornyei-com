@@ -42,10 +42,6 @@ const CopyImage = styled.img`
     }
 `;
 
-const HiddenInput = styled.input`
-    display: none;
-`;
-
 const Contact = () => {
 
     const copyOnClick = () => {
