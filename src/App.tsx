@@ -4,12 +4,21 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Header from './Header'
 import Navbar from './Navbar';
 import Contact from './Contact';
 import CVPage from './CVPage';
 import Footer from './Footer';
+
+const MainContainer = styled.main`
+  flex: 1 0 auto;
+`;
+
+const FooterContainer = styled.footer`
+  flex-shrink: 0;
+`;
 
 function App() {
   return (
@@ -20,7 +29,7 @@ function App() {
       <nav>
         <Navbar />
       </nav>
-      <main>
+      <MainContainer>
         <Switch>
           <Route path="/contact">
             <Contact />
@@ -29,10 +38,10 @@ function App() {
             <CVPage />
           </Route>
         </Switch>
-      </main>
-      <footer>
+      </MainContainer>
+      <FooterContainer>
         <Footer />
-      </footer>
+      </FooterContainer>
     </Router>
   );
 }
